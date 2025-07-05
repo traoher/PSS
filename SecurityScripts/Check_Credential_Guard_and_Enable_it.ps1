@@ -14,4 +14,5 @@ Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\Lsa" -Name "LsaCf
 Enable-WindowsOptionalFeature -Online -FeatureName IsolatedUserMode -All -NoRestart
 Enable-WindowsOptionalFeature -Online -FeatureName HypervisorPlatform -All -NoRestart
 
+#write to to console
 Write-Output "Credential Guard configuration applied. Please reboot your computer to complete the process."
