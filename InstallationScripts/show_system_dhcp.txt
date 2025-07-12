@@ -1,0 +1,183 @@
+CLAWSON-01 # show system dhcp server
+config system dhcp server
+    edit 2
+        set dns-service default
+        set default-gateway 192.168.1.99
+        set netmask 255.255.255.0
+        set interface "mgmt"
+        config ip-range
+            edit 1
+                set start-ip 192.168.1.110
+                set end-ip 192.168.1.210
+            next
+        end
+    next
+    edit 3
+        set ntp-service local
+        set default-gateway 10.255.1.1
+        set netmask 255.255.255.0
+        set interface "fortilink"
+        config ip-range
+            edit 1
+                set start-ip 10.255.1.2
+                set end-ip 10.255.1.254
+            next
+        end
+        set vci-match enable
+        set vci-string "FortiSwitch" "FortiExtender"
+    next
+    edit 4
+        set default-gateway 10.72.97.1
+        set netmask 255.255.248.0
+        set interface "port2"
+        config ip-range
+            edit 1
+                set start-ip 10.72.97.10
+                set end-ip 10.72.103.254
+            next
+        end
+        config reserved-address
+            edit 1
+                set ip 10.72.97.123
+                set mac 00:76:86:ea:3e:ca
+            next
+        end
+        set dns-server1 10.72.97.85
+        set dns-server2 10.72.97.86
+    next
+    edit 5
+        set dns-service default
+        set default-gateway 10.10.22.1
+        set netmask 255.255.255.0
+        set interface "CORPWIFI-VLAN"
+        config ip-range
+            edit 1
+                set start-ip 10.10.22.20
+                set end-ip 10.10.22.254
+            next
+        end
+    next
+    edit 6
+        set lease-time 14400
+        set dns-service default
+        set default-gateway 172.16.10.1
+        set netmask 255.255.255.0
+        set interface "GUEST-WIFI"
+        config ip-range
+            edit 1
+                set start-ip 172.16.10.20
+                set end-ip 172.16.10.254
+            next
+        end
+    next
+    edit 14
+        set dns-service default
+        set default-gateway 192.168.2.1
+        set netmask 255.255.255.0
+        set interface "port3"
+        config ip-range
+            edit 1
+                set start-ip 192.168.2.10
+                set end-ip 192.168.2.254
+            next
+        end
+    next
+    edit 8
+        set dns-service default
+        set default-gateway 10.10.1.1
+        set netmask 255.255.255.0
+        set interface "dmz"
+        config ip-range
+            edit 1
+                set start-ip 10.10.1.2
+                set end-ip 10.10.1.254
+            next
+        end
+    next
+    edit 9
+        set dns-service local
+        set default-gateway 192.168.10.1
+        set netmask 255.255.255.0
+        set interface "VOICE"
+        config ip-range
+            edit 1
+                set start-ip 192.168.10.20
+                set end-ip 192.168.10.254
+            next
+        end
+    next
+    edit 11
+        set dns-service default
+        set default-gateway 192.168.90.1
+        set netmask 255.255.255.0
+        set interface "MS"
+        config ip-range
+            edit 1
+                set start-ip 192.168.90.20
+                set end-ip 192.168.90.254
+            next
+        end
+    next
+    edit 12
+        set dns-service default
+        set default-gateway 192.168.91.1
+        set netmask 255.255.255.0
+        set interface "MSS"
+        config ip-range
+            edit 1
+                set start-ip 192.168.91.20
+                set end-ip 192.168.91.254
+            next
+        end
+    next
+    edit 13
+        set dns-service default
+        set default-gateway 10.70.92.1
+        set netmask 255.255.255.0
+        set interface "TC"
+        config ip-range
+            edit 1
+                set start-ip 10.70.92.20
+                set end-ip 10.70.92.254
+            next
+        end
+    next
+    edit 15
+        set dns-service default
+        set default-gateway 192.168.93.1
+        set netmask 255.255.255.0
+        set interface "BC"
+        config ip-range
+            edit 1
+                set start-ip 192.168.93.20
+                set end-ip 192.168.93.254
+            next
+        end
+    next
+    edit 16
+        set dns-service default
+        set default-gateway 192.168.94.1
+        set netmask 255.255.255.0
+        set interface "NC"
+        config ip-range
+            edit 1
+                set start-ip 192.168.94.20
+                set end-ip 192.168.94.254
+            next
+        end
+    next
+    edit 1
+        set dns-service default
+        set default-gateway 192.168.96.1
+        set netmask 255.255.255.0
+        set interface "PRNTSVR"
+        config ip-range
+            edit 1
+                set start-ip 192.168.96.20
+                set end-ip 192.168.96.254
+            next
+        end
+    next
+end
+
+CLAWSON-01 #
